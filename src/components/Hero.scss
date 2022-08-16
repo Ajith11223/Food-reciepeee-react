@@ -1,0 +1,86 @@
+// ​@import url('https://fonts.googleapis.com/css2?fam...)
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat Alternates',sans-serif;
+    font-size: 16px;
+    background-color: rgb(80, 78, 78);
+
+}
+p{
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;   
+}
+.container{
+    max-width: 1000px;
+    margin: auto;   
+}
+section{
+    margin: 100px 0;
+}
+.text-center{
+    text-align: center;
+    max-width: 780;
+    margin: auto;
+}
+h2{
+    font-size: 32px;
+    margin-bottom: 18px;
+    color: aliceblue;
+}
+h1{
+    font-size: 40px;
+    margin-bottom: 18px;
+    color: rgb(242, 242, 239);
+}
+
+.flex{
+    display: flex;
+
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}
+.br-10{
+    border-radius: 10px;
+}
+.gap{
+    gap: 45px;
+}
+img{
+    
+   width: 80%;
+    object-fit: cover;
+}
+
+.hero{
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+    &-content{
+        max-width: 450px;
+      position: absolute ;
+      left: 200px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+   
+    h2,p {
+        text-shadow: 2px 3px 4px rgb(230, 221, 221);
+    }
+}

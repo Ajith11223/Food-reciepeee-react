@@ -1,0 +1,17 @@
+.special-dishes{
+    &-container{
+        width: 600px;
+        margin: auto;
+    }
+    &-list{
+        margin-top: 80px;
+        h4{
+            margin-top: 18px;
+            color: aliceblue;
+        }
+        li{
+            width: 250px;
+              
+        }
+    }
+}
