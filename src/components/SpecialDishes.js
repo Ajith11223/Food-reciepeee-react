@@ -1,4 +1,6 @@
 import React, { useContext, useState } from 'react'
+
+
 import CardDish from './CardDish'
 import './SpecialDishes.scss'
 import Popup from './Popup'
@@ -6,6 +8,7 @@ import { AllMenuContext } from './AllMenuContext'
 import AddToCart from './AddToCart'
 
 function SpecialDishes(props) {
+    
 
     let [showPopup, setShowPopup] = useState(false)
     let [currentDish, setCurrentDish] = useState('')
@@ -36,7 +39,7 @@ function SpecialDishes(props) {
         
     }
 // special menu  
-    let maxSpecialDishes = 8
+    let maxSpecialDishes = 6
     let specialMenus = allMenus.map((menuItem, index) => {
         if (index < maxSpecialDishes) {
             return (
@@ -55,6 +58,7 @@ function SpecialDishes(props) {
             {showPopup && <Popup closePopupHandler={closePopupHandler}
              currentDish={currentDish} addToCartHandler={addToCartHandler}
               />}
+              
 
             <div className="container">
                 <AddToCart addToCartItem={addToCartItem}/>

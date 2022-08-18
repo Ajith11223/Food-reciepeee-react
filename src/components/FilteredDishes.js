@@ -4,6 +4,8 @@ import CardDish from './CardDish';
 import './FilteredDishes.scss'
 import Pagination from './Pagination';
 import { AllMenuContext } from './AllMenuContext';
+// import { Container } from 'react-bootstrap';
+
 
 function FilteredDishes() {
  
@@ -102,6 +104,7 @@ function FilteredDishes() {
 
 // rendering
     return (
+        // <Container>
         <div className='filterd-dishes'>
             <div className="container">
                 <div className="text-center">
@@ -136,6 +139,7 @@ function FilteredDishes() {
                    currentPage ={currentPage} 
                    setCurrentPage={setCurrentPage}/>
         </div>
+        // </Container>
     )
 }
 

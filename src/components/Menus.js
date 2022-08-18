@@ -6,6 +6,10 @@ import FilteredDishes from "./FilteredDishes";
 import Header from "./Header";
 import { AllMenus } from "./AllMenuContext";
 import Checkout from "./Checkout";
+import AddToCart from "./AddToCart";
+import {AppProvider} from '../Context/AppProvider'
+
+
 
 // create a global context thats shareed to its children
 // export const AllMenuContext = React.createContext()
@@ -14,12 +18,10 @@ import Checkout from "./Checkout";
 
 function Menus() {
 
-
-
-
     return (
         <div >
             {/* <AllMenuContext.Provider value={menu}> */}
+            <AppProvider>
 
             <Header />
             <Hero />
@@ -29,15 +31,16 @@ function Menus() {
                     <FilteredDishes />
                 </AllMenus>} />
                 {/* page 2 */}
-                <Route path="/checkout" element={<Checkout />} />
-
-
+                <Route path="/checkout" element={<Checkout /> } />
+               <Route path="/cart" element={<AddToCart/>}/>
             </Routes>
 
 
+            </AppProvider>
 
             {/* </AllMenuContext.Provider> */}
         </div>
+   
     )
 }
 
